@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <link rel="stylesheet" href="css/plantweb.css">
+    <title>FLO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+    <!-- ---font-Awesome---- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap-icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+
+</head>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+
+        window.addEventListener('scroll', function () {
+
+            if (window.scrollY > 200) {
+                document.getElementById('navbar_top').classList.add('fixed-top', 'shadow');
+                // add padding top to show content behind navbar
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                document.getElementById('navbar_top').classList.remove('fixed-top', 'shadow');
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            }
+        });
+    });
+	// DOMContentLoaded  end
+</script>
+<style type="text/css">
+    .fixed-top {
+        top: -40px;
+        transform: translateY(40px);
+        transition: transform .6s;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-white  text-primary py-3 px-1 px-sm-2 px-md-3 px-lg-4 px-xl-5"
+        id="navbar_top">
+        <div class="container-fluid px-3 px-sm-1 px-md-2 px-lg-3 px-xl-4">
+            <a class="navbar-brand text-uppercase" href="#"><span class="logo ps-5">Flo.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-3 px-sm-1 px-md-2 px-lg-3 px-xl-4" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto ">
+                    <a class="nav-link mx-2 active" aria-current="page" href="#">New Arrivals</a>
+                    <a class="nav-link mx-2" href="#">Best Seller</a>
+                    <a class="nav-link mx-2" href="#">Reviews</a>
+                </div>
+                <div class="button-div">
+                    <a class="nav-link mx-2" href="#">
+                        <button class="btn button py-3"><span class="nevbar-btn-text">Sign Up</span></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar background color -->
+    <div class="container-fluid navbar-back"></div>
+
+    <!-- Header -->
+    <header class="container-fluid myheader  p-0 ">
+        <div class="container-fluid">
+            <div class="row  p-0">
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ">
+                    <div class="row">
+                        <div
+                            class="left-container  ms-xl-5 ms-lg-4 ms-md-4 ms-sm-0 ms-0 ps-xl-5 ps-lg-4 ps-md-4 ps-sm-5 ps-5 pe-xl-5 pe-lg-4 pe-md-4 pe-sm-4 pe-4">
+                            <!-- margin -->
+                            <div class="d-xl-block d-lg-block d-md-none d-sm-none d-none margin-xsm "></div>
+                            <div class="d-xl-none d-lg-none d-md-block d-sm-block d-block margin-sm "></div>
+
+                            <div class="mian-heading-div mt-xl-5 mt-lg-4 mt-md-0 mt-sm-0 mt-0
+                             me-xl-5 me-lg-4 me-md-2 me-sm-1 me-0 
+                             pe-xl-5 pe-lg-4 pe-md-2 pe-sm-1 pe-0 ">
+                                <h2 class="display-3 main-heading">Gift and Flower <span class="d-none d-xl-inline">
+                                        <br></span> for Your Beloved.</h2>
+                            </div>
+                            <div
+                                class="header-para-div mt-3 me-xl-5 me-lg-4 me-md-2 me-sm-1 me-0 pe-xl-5 pe-lg-4 pe-md-2 pe-sm-1 pe-0 ">
+                                <p class="fs-5 header-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Assumenda nihil accusamus temporibus vitae provident libero totam?</p>
+                            </div>
+                            <div class="header-button-div mt-4">
+                                <button class="btn header-button px-5">Start Shopping</button>
+                            </div>
+                            <!-- margin -->
+                            <div class=" margin-xsm"></div>
+                        </div>
+                    </div>
+
+                    <!-- Show-Case Bar -->
+                    <div class=" mt-3 mb-xl-0 mb-lg-3 mb-md-1 d-xl-block d-lg-none d-md-none d-sm-none d-none">
+                        <div
+                            class="showcase row ms-xl-5 ms-lg-4 ms-md-4 ms-sm-0 ms-0 ps-xl-5 ps-lg-4 ps-md-4 ps-sm-5 ps-5 ">
+                            <!-- First Item -->
+                            <div class="col-6 showcase-rack rack-1 py-1 px-3">
+                                <div class="row">
+                                    <div class="">
+                                        <img src="images/plant website/plant1.png" class="showcase-image-1 img-fluid"
+                                            alt="">
+                                    </div>
+                                    <div class="col-8 ms-auto">
+                                        <div class="ms-3">
+                                            <div class="mt-3 ">
+                                                <p class="showcase-label m-0 fs-5">Tulip Package</p>
+                                            </div>
+                                            <div class="mt-1">
+                                                <p class="showcase-price fs-5 m-0">$70.99</p>
+                                            </div>
+                                            <a href="" class="showcase-detail-tag">
+                                                <p class="showcase-detail m-0">Details →</p>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Second Item -->
+                            <div class="col-6 showcase-rack rack-2 py-1 px-3">
+                                <div class="row">
+                                    <div class="">
+                                        <img src="images/plant website/plant2.png" class="showcase-image-2 img-fluid"
+                                            alt="">
+                                    </div>
+                                    <div class="col-8 ms-auto">
+                                        <div class="ms-3">
+                                            <div class="mt-3 ">
+                                                <p class="showcase-label m-0 fs-5">Rose Package</p>
+                                            </div>
+                                            <div class="mt-1">
+                                                <p class="showcase-price fs-5 m-0">$70.99</p>
+                                            </div>
+                                            <a href="" class="showcase-detail-tag">
+                                                <p class="showcase-detail m-0 mb-3">Details →</p>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 right-section p-0 ">
+                    <div class="header-img-div">
+                        <img src="images/plant website/model-1.png" class="header-img mx-sm-auto mx-auto  " alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="margin-xsm d-xl-none d-lg-block d-md-block d-sm-block d-block"></div>
+
+
+            <!-- Show-Case For small screen -->
+            <div class="row d-xl-none d-lg-block d-md-block d-sm-block d-block p-0">
+                <!-- Show-Case Bar -->
+                <div class="">
+                    <div
+                        class="showcase row ms-xl-3 ms-lg-3 ms-md-2 ms-sm-0 ms-0 ps-xl-5 ps-lg-4 ps-md-4 ps-sm-1 ps-1 pe-xl-5 pe-lg-4 pe-md-4 pe-sm-1 pe-1 ">
+                        <!-- First Item -->
+                        <div class="col-6 showcase-rack px-3">
+                            <div class="row">
+                                <div class="">
+                                    <img src="images/plant website/plant1.png" class="showcase-image-1 img-fluid"
+                                        alt="">
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-10 ms-auto">
+                                    <div class="ms-3">
+                                        <div class="mt-md-3 mt-sm-1 mt-1">
+                                            <p class="showcase-label m-0 fs-xl-5 fs-lg-5 fs-md-5 fs-sm-6 ">Tulip Package
+                                            </p>
+                                        </div>
+                                        <div class="mt-xl-1 mt-lg-1 mt-md-1 mt-sm-0 mt-0">
+                                            <p class="showcase-price m-0 fs-xl-5 fs-lg-5 fs-md-5 fs-sm-6 ">$70.99</p>
+                                        </div>
+                                        <a href="" class="showcase-detail-tag">
+                                            <p class="showcase-detail m-0 mb-md-3 mb-sm-1 mb-0">Details →</p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Item -->
+                        <div class="col-6 showcase-rack py-1 px-3">
+                            <div class="row">
+                                <div class="">
+                                    <img src="images/plant website/plant2.png" class="showcase-image-2 img-fluid"
+                                        alt="">
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-10 ms-auto">
+                                    <div class="ms-3">
+                                        <div class="mt-md-3 mt-sm-1 mt-1">
+                                            <p class="showcase-label m-0 fs-xl-5 fs-lg-5 fs-md-5 fs-sm-6 ">Rose Package
+                                            </p>
+                                        </div>
+                                        <div class="mt-xl-1 mt-lg-1 mt-md-1 mt-sm-0 mt-0">
+                                            <p class="showcase-price m-0 fs-xl-5 fs-lg-5 fs-md-5 fs-sm-6 ">$70.99</p>
+                                        </div>
+                                        <a href="" class="showcase-detail-tag">
+                                            <p class="showcase-detail m-0 mb-md-3 mb-sm-1 mb-0">Details →</p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-xsm d-xl-none d-lg-block d-md-block d-sm-block d-block"></div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- ----------Number Row--------------- -->
+
+    <div class="container-fluid numbers-row">
+        <div class="row ">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+                <div class="row">
+                    <div class="col-3  py-xl-5 py-lg-5 py-md-4 py-sm-3 py-3 mt-2 number-div">
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-center">
+                                <div class="numbers fs-xl-1 fs-lg-1 fs-md-1 fs-sm-2 fs-4">3000+</div>
+                            </div>
+                            <div class="row ">
+                                <div class="numbers-item fs-xl-5 fs-lg-5 fs-md-6 fs-sm-6 fs-6">Packages Sold</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3  py-xl-5 py-lg-5 py-md-4 py-sm-3 py-3 mt-2 number-div">
+                        <div class="container-fluid">
+                            <div class="row ">
+                                <div class="numbers fs-xl-1 fs-lg-1 fs-md-1 fs-sm-2 fs-4">5000+</div>
+                            </div>
+                            <div class="row ">
+                                <div class="numbers-item fs-xl-5 fs-lg-5 fs-md-6 fs-sm-6 fs-6">Bouquet Sold</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3  py-xl-5 py-lg-5 py-md-4 py-sm-3 py-3 mt-2 number-div">
+                        <div class="container-fluid">
+                            <div class="rowr">
+                                <div class="numbers fs-xl-1 fs-lg-1 fs-md-1 fs-sm-2 fs-4">7000+</div>
+                            </div>
+                            <div class="row ">
+                                <div class="numbers-item fs-xl-5 fs-lg-5 fs-md-6 fs-sm-6 fs-6">Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3  py-xl-5 py-lg-5 py-md-4 py-sm-3 py-3 mt-2 number-div">
+                        <div class="container-fluid">
+                            <div class="row ">
+                                <div class="numbers fs-xl-1 fs-lg-1 fs-md-1 fs-sm-2 fs-4">25+</div>
+                            </div>
+                            <div class="row ">
+                                <div class="numbers-item fs-xl-5 fs-lg-5 fs-md-6 fs-sm-6 fs-6">Years <span
+                                        class="d-xl-inline d-lg-inline d-md-inline d-sm-none d-none">Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-0 col-0"></div>
+
+
+
+        </div>
+    </div>
+
+    <!-- --------------  Second Portion---------------- -->
+
+    <div class="second-portion container-fluid">
+
+        <div class="margin-xsm"></div>
+
+        <div class="row">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+                <div class="row mb-3">
+                    <div class="col ms-3 p-0 m-0">
+                        <p class="pro-heading p-0">Product</p>
+                        <p class="second-portion-heading fs-2 fw-semibold mt-0 p-0">Our Best Sellers This Months</p>
+                    </div>
+                    <div class="col d-flex justify-content-end" >
+                        <div class="row my-auto me-2">
+                            <div class="col">
+                                <button class="carousel-button" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <i class="fa-solid fa-angle-up fa-rotate-270"></i>
+                                    </button>
+                            </div>         
+                            <div class="col">
+                                <button class="carousel-button" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <i class="fa-solid fa-angle-up fa-rotate-90"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-0">
+                    <!-- slider -->
+                    <div class="container-fluid p-0 m-0">
+                        <div class="row p-0 m-0">
+                            <div class="col-12">
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <!-- first-slide -->
+                                        <div class="carousel-item active " data-bs-interval="10000">
+                                            <div class="carousel-div d-block w-100">
+                                                <div class="contianer-fluid">
+                                                    <div class="row pb-3">
+
+                                                        <!-- -------------- Card ----------------- -->
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p1-removebg-preview.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p2.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-0 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p4.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p3.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        
+
+                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Second-slide -->
+                                        <div class="carousel-item " data-bs-interval="10000">
+                                            <div class="carousel-div d-block w-100">
+                                                <div class="contianer-fluid">
+                                                    <div class="row pb-3">
+
+                                                        <!-- -------------- Card ----------------- -->
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p1-removebg-preview.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p2.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-0 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p4.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p3.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        
+
+                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Third-slide -->
+                                        <div class="carousel-item " data-bs-interval="10000">
+                                            <div class="carousel-div d-block w-100">
+                                                <div class="contianer-fluid">
+                                                    <div class="row pb-3">
+
+                                                        <!-- -------------- Card ----------------- -->
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p1-removebg-preview.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p2.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-0 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p4.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                                                            <div class="product-card container-fluid">
+                                                                <div class="row card-img-div">
+                                                                    <div class="icon-div">
+
+                                                                        <img src="images/plant website/tag-removebg-preview.png"
+                                                                            class="tag w-25" alt="">
+
+                                                                        <i class="bi bi-heart-fill heart fs-3"></i>
+
+                                                                    </div>
+                                                                    <div class="card-height"></div>
+
+                                                                    <img src="images/plant website/p3.png"
+                                                                        class="card-img w-75" alt="">
+                                                                </div>
+                                                                <div class="row card-text-div py-4">
+                                                                    <div
+                                                                        class="col-9 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-1 ps-0 ">
+                                                                        <div class="container-fluid">
+                                                                            <div class="">
+                                                                                <p class="card-label m-0">For Special
+                                                                                    Person</p>
+                                                                                <p class="card-title m-0">Rose Bouquet
+                                                                                </p>
+                                                                                <p class="card-price m-0">$ 27.00</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-3 ps-sm-1 ps-0 my-auto">
+                                                                        <div
+                                                                            class="card-button btn d-flex justify-content-center">
+                                                                            <i class="bi bi-cart3 card-button-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        
+
+                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-0 col-0"></div>
+        </div>
+
+
+
+        <div class="margin-sm"></div>
+
+
+    </div>
+
+
+</body>
+
+</html>
